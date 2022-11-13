@@ -24,7 +24,7 @@ const Accordion = ({items}) =>{
             </React.Fragment>
         );
     });
-clase 143
+clase 143 test
     return (
         <div className="ui styled accordion">
             {renderedItems}
