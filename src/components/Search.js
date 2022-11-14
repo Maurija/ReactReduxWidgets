@@ -35,6 +35,7 @@ const Search = () => {
         return (()=>clearTimeout(timeoutId));
         
     },[term]);
+    clase 166
     
     const renderResults = results.map((result) => {
         return (
