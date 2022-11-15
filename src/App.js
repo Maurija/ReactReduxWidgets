@@ -3,7 +3,10 @@ import { useState } from "react";
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 
+// APY KEY GOOGLE API : AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
+clase 188
 const items = [
     {
         title: "What is React?",
@@ -35,21 +38,12 @@ const options = [
 ];
 
 const App = () =>{
-    const [selected,setSelected] = useState(options[0]);
-    const [showDropdown,setShowDropdown] = useState(true);
+    // const [selected,setSelected] = useState(options[0]);
+    // const [showDropdown,setShowDropdown] = useState(true);
 
     return (
-        <div>
-            {/* <Accordion items={items}/> */}
-            <button onClick={()=>setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-            {showDropdown ?
-                <Dropdown                
-                selected={selected} 
-                onSelectedChange={setSelected}
-                options={options}/> :
-                null
-            }
-            
+        <div className="ui container">
+            <Translate />
         </div>
 
     );
