@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
+import Convert from "./Convert";
+
+// APY KEY GOOGLE API : AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
 
 const options = [
     {
@@ -13,6 +16,10 @@ const options = [
     {
         label: "Hindi",
         value: "hi"
+    },
+    {
+        label: "Español",
+        value: "es"
     }
 ]
 
@@ -35,6 +42,9 @@ const Translate = () => {
                 label="Select a Language"
                 options={options}
            /> 
+           <br />
+           <h3 className="ui header">Output</h3>
+           <Convert text={text} language={language} />
         </div>
     );
 
