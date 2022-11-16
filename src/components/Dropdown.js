@@ -4,6 +4,7 @@ const Dropdown = ({options, selected, onSelectedChange, label}) => {
     const [open,setOpen] = useState(false);
     const ref = useRef();
 
+    //Método para que cierre el dropdown si se hace click en cualquier parte del body
     useEffect(() => {
         const onBodyClick = (event) => {
             if (ref.current.contains(event.target)){
