@@ -45,6 +45,8 @@ const App = () =>{
      const [selected,setSelected] = useState(options[0]);
     // const [showDropdown,setShowDropdown] = useState(true);
 
+    
+    
     return (
         <div className="ui container">
             <Header />
@@ -56,7 +58,7 @@ const App = () =>{
             </Route>
             <Route path="/dropdown">
                 <Dropdown 
-                    label="Select a coloar"    
+                    label="Select a color"    
                     options={options}
                     selected={selected}
                     onSelectedChange={setSelected}

@@ -1,4 +1,5 @@
 import { useState, useEffect , useRef} from "react";
+import Panel from "./Panel";
 
 const Dropdown = ({options, selected, onSelectedChange, label}) => {
     const [open,setOpen] = useState(false);
@@ -37,13 +38,13 @@ const Dropdown = ({options, selected, onSelectedChange, label}) => {
     return (
         <div ref={ref} className="ui form">
             <div className="field">
-                <label className="label">{label}</label>
+                <label className="label">{label || 'Select...'}</label>
                 <div className={`ui selection dropdown ${open ? 'visible active' : ''}`} onClick={() => {setOpen(!open)}}>
                     <i className="dropdown icon"></i>
-                    <div className="text">{selected.label}</div>
-                    <div className={`menu ${open ? 'visible transition' : ''}`}>
+                    <Panel className="text">{selected.label}</Panel>
+                    <Panel className={`menu ${open ? 'visible transition' : ''}`}>
                         {renderedOptions}
-                    </div>                    
+                    </Panel>                    
                 </div>
                 {/* Comento la siguiente línea para que pueda ser reutilizado el dropdown para otros valores que no sean colores */}
                 {/* <div style={{color: `${selected.value}`}}>{selected.label}</div> */}
